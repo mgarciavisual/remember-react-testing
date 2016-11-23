@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import sut from '../../src/2.async';
+import delayedRemove from '../../src/2.async';
 
 describe('Async', function() {
 	xit('Should exist', function() {

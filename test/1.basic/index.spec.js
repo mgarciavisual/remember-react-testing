@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import sut from '../../src/1.basic';
+import Person from '../../src/1.basic';
 
 describe('Basic', function() {
 	xit('Should exist', function() {
