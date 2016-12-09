@@ -5,12 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "mocha --compilers js:babel-register --require ./test/browser.js --recursive ./test",
-		"test:basic": "mocha --compilers js:babel-register --require ./test/browser.js ./test/1.basic/index.spec.js",
-		"test:async": "mocha --compilers js:babel-register --require ./test/browser.js ./test/2.async/index.spec.js",
-		"test:fake-timer": "mocha --compilers js:babel-register --require ./test/browser.js ./test/3.fake-timer/index.spec.js",
-		"test:spy": "mocha --compilers js:babel-register --require ./test/browser.js ./test/4.spy/index.spec.js",
-		"test:stub": "mocha --compilers js:babel-register --require ./test/browser.js ./test/5.stub/index.spec.js",
-		"test:fake-server": "mocha --compilers js:babel-register --require ./test/browser.js ./test/6.fake-server/index.spec.js"
+		"test:watch": "npm run test -- --watch",
+		"test:coverage": "babel-node ./node_modules/.bin/isparta cover _mocha -- --require ./test/browser.js --recursive ./test"
 	},
 	"repository": {
 		"type": "git",
@@ -23,9 +19,12 @@
 	},
 	"homepage": "https://github.com/mgarciavisual/remember-testing#readme",
 	"devDependencies": {
+		"babel-cli": "^6.18.0",
 		"babel-core": "^6.18.2",
 		"babel-preset-es2015": "^6.18.0",
 		"chai": "^3.5.0",
+		"isparta": "^4.0.0",
+		"istanbul": "^0.4.5",
 		"jsdom": "^9.8.3",
 		"mocha": "^3.1.2",
 		"sinon": "^1.17.6"
